@@ -56,7 +56,7 @@
 <body>
   <header>
     <h1>🎉 Skill-Bsaed-Contest 🎉</h1>
-    <p>केवल ₹700 में जीतिए <strong>[Electric Scooty worth 75000 Rs]</strong></p>
+    <p>केवल ₹750 में जीतिए <strong>[Electric Scooty worth 75000 Rs]</strong></p>
   </header>  <div class="container">
     <h2>कैसे भाग लें?</h2>
     <ol>
@@ -67,7 +67,6 @@
 <a href="upi://pay?pa=9812716261@okbizaxis&pn=Orbital Studies & Immigration Pvt. Ltd.&am=750&cu=INR" class="btn">💳 अभी ₹750 जमा करें</a>
 
 <h2>Entry Form:</h2>
-<!-- यहां अपने Google Form का embed code लगाएँ -->
 <iframe src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true">Loading…</iframe>
 
 <div class="rules">
