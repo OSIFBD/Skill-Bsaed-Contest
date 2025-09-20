@@ -27,11 +27,11 @@
       margin: 5px 0;
     }
     header .byline {
-      font-size: 1.2rem; /* जैसा है वैसा */
+      font-size: 12px; /* fixed 12px */
       margin: 5px 0;
     }
     header .offer {
-      font-size: 1rem; /* पहले जैसा normal */
+      font-size: 12px; /* fixed 12px */
       margin: 5px 0;
     }
     .container {
@@ -60,18 +60,6 @@
     .btn:hover {
       background: #218838;
     }
-    .rules {
-      background: #4F0A5A;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 20px auto;
-      width: 100%; /* पूरी चौड़ाई */
-      height: 200px; /* आधी ऊँचाई */
-      overflow-y: auto; /* अगर text ज्यादा है तो scroll हो */
-      color: white;
-      font-size: 0.9rem;
-      text-align: left;
-    }
     .qr {
       text-align: center;
       margin-top: 20px;
@@ -85,6 +73,19 @@
     .guidelines {
       font-size: 0.9rem; /* छोटे अक्षर */
       line-height: 1.5;
+    }
+    .rules {
+      background: #4F0A5A;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px auto 0 auto;
+      width: 100%;          /* header जितना चौड़ा */
+      max-width: none;      /* container limit हटाई */
+      height: 200px;        /* आधी ऊँचाई */
+      overflow-y: auto;     /* text ज्यादा तो scroll */
+      color: white;
+      font-size: 0.9rem;
+      text-align: left;
     }
     @media (max-width: 600px) {
       .container {
@@ -115,7 +116,7 @@
     <ol>
       <li>नीचे दिए गए बटन या QR Code से ₹750 UPI Payment करें।</li>
       <li>उसके बाद Google Form भरें और payment screenshot upload करें।</li>
-      <li>इसके बाद आपका Skill Based Exam होगा, जिसमे highest scocre लेन वालों में से विजेता lucky draw द्वारा चुना जाएगा।</li>
+      <li>इसके बाद आपका Skill Based Exam होगा, जिसमे highest scocre लेने वालों में से विजेता lucky draw द्वारा चुना जाएगा।</li>
     </ol>
 
     <h2>Payment:</h2>
@@ -152,16 +153,17 @@
         Results will be announced based on correct answers and scoring.</li>
       </ul>
     </div>
+  </div>
 
-    <div class="rules">
-      <p><strong>Terms & Conditions:</strong></p>
-      <ul>
-        <li>यह contest skill-based है, lottery नहीं।</li>
-        <li>Entry Fee non-refundable है।</li>
-        <li>सही उत्तर देने वालों में से एक विजेता lucky draw द्वारा चुना जाएगा।</li>
-        <li>Organizer का decision final होगा।</li>
-      </ul>
-    </div>
+  <!-- Terms & Conditions अब container के बाहर -->
+  <div class="rules">
+    <p><strong>Terms & Conditions:</strong></p>
+    <ul>
+      <li>यह contest skill-based है, lottery नहीं।</li>
+      <li>Entry Fee non-refundable है।</li>
+      <li>सही उत्तर देने वालों में से एक विजेता lucky draw द्वारा चुना जाएगा।</li>
+      <li>Organizer का decision final होगा।</li>
+    </ul>
   </div>
 </body>
 </html>
