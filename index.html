@@ -11,12 +11,28 @@
       margin: 0;
       padding: 0;
     }
-    header img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      border: none;
+    header {
+      background: #4F0A5A;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header .main-title {
+      font-size: 2.5rem;  /* सबसे बड़ा */
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    header .sub-title {
+      font-size: 1.5rem;  /* उससे छोटा */
+      margin: 5px 0;
+    }
+    header .byline {
+      font-size: 12px; /* fixed 12px */
+      margin: 5px 0;
+    }
+    header .offer {
+      font-size: 12px; /* fixed 12px */
+      margin: 5px 0;
     }
     .container {
       max-width: 800px;
@@ -49,13 +65,13 @@
       margin-top: 20px;
     }
     .qr img {
-      width: 150px;
+      width: 150px; /* छोटा QR */
       max-width: 100%;
       border: 2px solid #4F0A5A;
       border-radius: 12px;
     }
     .guidelines {
-      font-size: 0.9rem;
+      font-size: 0.9rem; /* छोटे अक्षर */
       line-height: 1.5;
     }
     .rules {
@@ -63,10 +79,10 @@
       padding: 15px;
       border-radius: 8px;
       margin: 20px auto 0 auto;
-      width: 100%;
-      max-width: none;
-      height: 200px;
-      overflow-y: auto;
+      width: 100%;          /* header जितना चौड़ा */
+      max-width: none;      /* container limit हटाई */
+      height: 200px;        /* आधी ऊँचाई */
+      overflow-y: auto;     /* text ज्यादा तो scroll */
       color: white;
       font-size: 0.9rem;
       text-align: left;
@@ -82,15 +98,17 @@
         padding: 12px 0;
       }
       .rules {
-        height: 150px;
+        height: 150px; /* mobile पर और compact */
       }
     }
   </style>
 </head>
 <body>
-  <!-- Header with working placeholder image -->
   <header>
-    <img src="https://via.placeholder.com/1200x300.png?text=Mega+Skill+Based+Contest+Banner" alt="Mega Skill Based Contest Banner">
+    <p class="main-title">Mega Skill Based Contest</p>
+    <p class="sub-title">Lets Shine Your Skill at the National Level</p>
+    <p class="byline">BY OSI PVT LTD</p>
+    <p class="offer">केवल ₹750 में पाएं मौका <strong>[Electric Scooty worth 75000 Rs]</strong> अपनी बनाने का</p>
   </header>
 
   <div class="container">
@@ -137,6 +155,7 @@
     </div>
   </div>
 
+  <!-- Terms & Conditions अब container के बाहर -->
   <div class="rules">
     <p><strong>Terms & Conditions:</strong></p>
     <ul>
