@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="hi">
+<!DOCTYPE html>
+<html lang="hi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,6 +36,8 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
     }
     .btn:hover {
       background: #218838;
@@ -51,36 +54,53 @@
       border: none;
       margin-top: 20px;
     }
+    @media (max-width: 600px) {
+      .container {
+        margin: 15px;
+        padding: 15px;
+      }
+      .btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>🎉 Skill-Bsaed-Contest 🎉</h1>
+    <h1>🎉 Skill-Based Contest 🎉</h1>
     <p>केवल ₹750 में जीतिए <strong>[Electric Scooty worth 75000 Rs]</strong></p>
-  </header>  <div class="container">
+  </header>
+
+  <div class="container">
     <h2>कैसे भाग लें?</h2>
     <ol>
       <li>नीचे दिए गए बटन से ₹750 UPI Payment करें।</li>
       <li>उसके बाद Google Form भरें और payment screenshot upload करें।</li>
       <li>सही जवाब देने वालों में से lucky draw द्वारा विजेता चुना जाएगा।</li>
-    </ol><h2>Payment:</h2>
-<a href="upi://pay?pa=hmt2cu@okaxis&pn=Harmeet Singh.&am=750&cu=INR" class="btn">💳 अभी ₹750 जमा करें</a>
+    </ol>
 
-<h2>Entry Form:</h2>
-<a href="https://forms.gle/uCVvNQjMHFTZkm9c7"_blank" class="btn">
-📝 Contest Form भरें
-</a>
+    <h2>Payment:</h2>
+    <a href="upi://pay?pa=hmt2cu@okaxis&pn=Harmeet Singh.&am=750&cu=INR" class="btn">
+      💳 अभी ₹750 जमा करें
+    </a>
 
-<div class="rules">
-  <h3>Terms & Conditions:</h3>
-  <ul>
-    <li>यह contest skill-based है, lottery नहीं।</li>
-    <li>Entry Fee non-refundable है।</li>
-    <li>सही उत्तर देने वालों में से एक विजेता lucky draw द्वारा चुना जाएगा।</li>
-    <li>Organizer का decision final होगा।</li>
-  </ul>
-</div>
+    <h2>Entry Form:</h2>
+    <a href="https://forms.gle/uCVvNQjMHFTZkm9c7" target="_blank" class="btn">
+      📝 Contest Form भरें
+    </a>
 
+    <div class="rules">
+      <h3>Terms & Conditions:</h3>
+      <ul>
+        <li>यह contest skill-based है, lottery नहीं।</li>
+        <li>Entry Fee non-refundable है।</li>
+        <li>सही उत्तर देने वालों में से एक विजेता lucky draw द्वारा चुना जाएगा।</li>
+        <li>Organizer का decision final होगा।</li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
+
