@@ -6,8 +6,8 @@
   <title>Mega Quiz Challenge</title>
   <style>
     body {
-      font-family: Times New Roman PS MT;
-      background: #4F0A5A;
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
       margin: 0;
       padding: 0;
     }
@@ -45,7 +45,6 @@
       margin-top: 10px;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
     }
-
     @keyframes slideIn {
       from { transform: translateY(-50px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
@@ -130,8 +129,7 @@
 <body>
 
   <header>
-    <h1>Mega Skill Based Contest</h1>
-    <p>Lets Shine Your Skill at the National Level</p>
+    <h1>🎉 Skill-Based Contest 🎉</h1>
     <p>केवल ₹750 में जीतिए <strong>[Electric Scooty worth 75000 Rs]</strong></p>
   </header>
 
@@ -139,14 +137,12 @@
     <h2>कैसे भाग लें?</h2>
     <ol>
       <li>नीचे दिए गए बटन या QR Code से ₹750 UPI Payment करें।</li>
-      <li>उसके बाद Google Form भरें और payment screenshot upload करें।</li>
+      <li>उसके बाद Google Form link केवल तभी दिखेगा।</li>
       <li>सही जवाब देने वालों में से lucky draw द्वारा विजेता चुना जाएगा।</li>
     </ol>
 
     <h2>Payment:</h2>
-    <a href="upi://pay?pa=hmt2cu@okaxis&pn=Harmeet Singh.&am=750&cu=INR" class="btn">
-      💳 अभी ₹750 जमा करें
-    </a>
+    <button id="paidBtn" class="btn">💳 अभी ₹750 जमा करें</button>
 
     <div class="qr">
       <p>या QR Code scan करें:</p>
@@ -154,8 +150,9 @@
       <p style="margin-top:5px; font-size:14px; color:#555;">PhonePe / GPay / Paytm खोलें और scan करें</p>
     </div>
 
+    <!-- Initially hidden form link -->
     <h2>Entry Form:</h2>
-    <a href="https://forms.gle/uCVvNQjMHFTZkm9c7" target="_blank" class="btn">
+    <a id="formLink" href="https://forms.gle/uCVvNQjMHFTZkm9c7" target="_blank" class="btn" style="display:none;">
       📝 Contest Form भरें
     </a>
 
@@ -172,6 +169,7 @@
 
   <!-- Confetti Script -->
   <script>
+    // Confetti Animation
     const header = document.querySelector('header');
     function createConfetti() {
       const confetti = document.createElement('div');
@@ -191,8 +189,15 @@
         }
       }, 20);
     }
-
     setInterval(createConfetti, 200);
+
+    // Payment button click - show form link
+    document.getElementById('paidBtn').addEventListener('click', function() {
+      alert("Payment assume किया गया। अब Google Form link दिखाई देगा।");
+      document.getElementById('formLink').style.display = "inline-block";
+      // Optionally scroll to form
+      document.getElementById('formLink').scrollIntoView({ behavior: 'smooth' });
+    });
   </script>
 
 </body>
