@@ -38,6 +38,7 @@
       font-weight: bold;
       cursor: pointer;
       transition: background 0.3s;
+      margin-top: 10px;
     }
     .btn:hover {
       background: #218838;
@@ -53,6 +54,16 @@
       height: 600px;
       border: none;
       margin-top: 20px;
+    }
+    .qr {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .qr img {
+      width: 250px;
+      max-width: 100%;
+      border: 2px solid #007bff;
+      border-radius: 12px;
     }
     @media (max-width: 600px) {
       .container {
@@ -76,7 +87,7 @@
   <div class="container">
     <h2>कैसे भाग लें?</h2>
     <ol>
-      <li>नीचे दिए गए बटन से ₹750 UPI Payment करें।</li>
+      <li>नीचे दिए गए बटन या QR Code से ₹750 UPI Payment करें।</li>
       <li>उसके बाद Google Form भरें और payment screenshot upload करें।</li>
       <li>सही जवाब देने वालों में से lucky draw द्वारा विजेता चुना जाएगा।</li>
     </ol>
@@ -85,6 +96,11 @@
     <a href="upi://pay?pa=hmt2cu@okaxis&pn=Harmeet Singh.&am=750&cu=INR" class="btn">
       💳 अभी ₹750 जमा करें
     </a>
+
+    <div class="qr">
+      <p>या QR Code scan करें:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=hmt2cu@okaxis&pn=Harmeet%20Singh.&am=750&cu=INR" alt="UPI QR Code">
+    </div>
 
     <h2>Entry Form:</h2>
     <a href="https://forms.gle/uCVvNQjMHFTZkm9c7" target="_blank" class="btn">
@@ -103,4 +119,3 @@
   </div>
 </body>
 </html>
-
