@@ -17,9 +17,22 @@
       padding: 20px;
       text-align: center;
     }
-    header p {
-      font-size: 1.5rem; /* header ke font bade */
-      margin: 8px 0;
+    header .main-title {
+      font-size: 2.5rem;  /* सबसे बड़ा */
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    header .sub-title {
+      font-size: 1.5rem;  /* उससे छोटा */
+      margin: 5px 0;
+    }
+    header .byline {
+      font-size: 1.2rem; /* जैसा है वैसा */
+      margin: 5px 0;
+    }
+    header .offer {
+      font-size: 1rem; /* पहले जैसा normal */
+      margin: 5px 0;
     }
     .container {
       max-width: 800px;
@@ -52,29 +65,25 @@
       padding: 15px;
       border-radius: 8px;
       margin: 20px auto;
-      width: 50%; /* aadha size */
-      color: white; /* font white */
-      font-size: 0.9rem; /* font chhota */
+      width: 100%; /* पूरी चौड़ाई */
+      height: 200px; /* आधी ऊँचाई */
+      overflow-y: auto; /* अगर text ज्यादा है तो scroll हो */
+      color: white;
+      font-size: 0.9rem;
       text-align: left;
-    }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      margin-top: 20px;
     }
     .qr {
       text-align: center;
       margin-top: 20px;
     }
     .qr img {
-      width: 150px; /* size chhota */
+      width: 150px; /* छोटा QR */
       max-width: 100%;
       border: 2px solid #4F0A5A;
       border-radius: 12px;
     }
     .guidelines {
-      font-size: 0.9rem; /* guidelines ka font chhota */
+      font-size: 0.9rem; /* छोटे अक्षर */
       line-height: 1.5;
     }
     @media (max-width: 600px) {
@@ -88,17 +97,17 @@
         padding: 12px 0;
       }
       .rules {
-        width: 90%; /* mobile view me thoda bada */
+        height: 150px; /* mobile पर और compact */
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <p>Mega Skill Based Contest</p>
-    <p>Lets Shine Your Skill at the National Level</p>
-    <p>BY OSI PVT LTD</p>
-    <p>केवल ₹750 में पाएं मौका <strong>[Electric Scooty worth 75000 Rs]</strong> अपनी बनाने का</p>
+    <p class="main-title">Mega Skill Based Contest</p>
+    <p class="sub-title">Lets Shine Your Skill at the National Level</p>
+    <p class="byline">BY OSI PVT LTD</p>
+    <p class="offer">केवल ₹750 में पाएं मौका <strong>[Electric Scooty worth 75000 Rs]</strong> अपनी बनाने का</p>
   </header>
 
   <div class="container">
