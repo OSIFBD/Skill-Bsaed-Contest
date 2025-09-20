@@ -6,12 +6,11 @@
   <title>Mega Skill Based Contest</title>
   <style>
     body {
-      font-family: "Times New Roman", serif;
+      font-family: Times New Roman, serif;
       background: #FDF2FF;
       margin: 0;
       padding: 0;
     }
-
     header img {
       width: 100%;
       height: auto;
@@ -19,7 +18,6 @@
       margin: 0 auto;
       border: none;
     }
-
     .container {
       max-width: 800px;
       margin: 30px auto;
@@ -28,11 +26,9 @@
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-
     h1, h2 {
       color: #333;
     }
-
     .btn {
       display: inline-block;
       background: #28a745;
@@ -45,41 +41,36 @@
       transition: background 0.3s;
       margin-top: 10px;
     }
-
     .btn:hover {
       background: #218838;
     }
-
     .qr {
       text-align: center;
       margin-top: 20px;
     }
-
     .qr img {
       width: 150px;
       max-width: 100%;
       border: 2px solid #4F0A5A;
       border-radius: 12px;
     }
-
     .guidelines {
       font-size: 0.9rem;
       line-height: 1.5;
     }
-
     .rules {
       background: #4F0A5A;
       padding: 15px;
       border-radius: 8px;
       margin: 20px auto 0 auto;
       width: 100%;
+      max-width: none;
       height: 200px;
       overflow-y: auto;
       color: white;
       font-size: 0.9rem;
       text-align: left;
     }
-
     @media (max-width: 600px) {
       .container {
         margin: 15px;
@@ -97,33 +88,63 @@
   </style>
 </head>
 <body>
-
-  <!-- Header with External Image -->
+  <!-- Header with working placeholder image -->
   <header>
-    <img src="banner.jpg" alt="Contest Banner">
+    <img src="https://via.placeholder.com/1200x300.png?text=Mega+Skill+Based+Contest+Banner" alt="Mega Skill Based Contest Banner">
   </header>
 
   <div class="container">
-    <h1>Mega Skill Based Contest</h1>
-    <p class="guidelines">
-      यहां अपने कॉन्टेस्ट का विवरण डालें। आप इस सेक्शन में जानकारी दे सकते हैं।
-    </p>
+    <h2>कैसे भाग लें?</h2>
+    <ol>
+      <li>नीचे दिए गए बटन या QR Code से ₹750 UPI Payment करें।</li>
+      <li>उसके बाद Google Form भरें और payment screenshot upload करें।</li>
+      <li>इसके बाद आपका Skill Based Exam होगा, जिसमे highest scocre लेने वालों में से विजेता lucky draw द्वारा चुना जाएगा।</li>
+    </ol>
 
-    <a href="#" class="btn">अभी रजिस्टर करें</a>
+    <h2>Payment:</h2>
+    <a href="upi://pay?pa=hmt2cu@okaxis&pn=Harmeet Singh.&am=750&cu=INR" class="btn">
+      💳 अभी ₹750 जमा करें
+    </a>
 
     <div class="qr">
-      <img src="qrcode.png" alt="QR Code">
+      <p>या QR Code scan करें:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=hmt2cu@okaxis&pn=Harmeet%20Singh.&am=750&cu=INR" alt="UPI QR Code">
     </div>
 
-    <div class="rules">
-      <h2>नियम और शर्तें</h2>
-      <p>
-        1. सभी प्रतिभागियों को निर्धारित नियमों का पालन करना होगा।<br>
-        2. आयोजकों का निर्णय अंतिम और बाध्यकारी होगा।<br>
-        3. अन्य शर्तें यहां लिखी जा सकती हैं।
-      </p>
+    <h2>Entry Form:</h2>
+    <a href="https://forms.gle/uCVvNQjMHFTZkm9c7" target="_blank" class="btn">
+      📝 Contest Form भरें
+    </a>
+  
+    <div class="container guidelines">
+      <h2>📌 Skill Test Guidelines / कौशल परीक्षा के दिशा-निर्देश</h2>
+      <ul>
+        <li>प्रतियोगिता में भाग लेने वाले उम्मीदवारों को लिखित कौशल परीक्षा में शामिल होना अनिवार्य है।<br>
+        Candidates participating in the contest must appear for the written skill test.</li>
+        <li>परीक्षा में 6th से 10th (NCERT BOOKS सभी विषय) सामान्य ज्ञान (GK), तार्किक क्षमता और कौशल आधारित प्रश्न शामिल होंगे।<br>
+        The test will include questions based on 6th to 10th (NCERT BOOKS All Subjects) General Knowledge (GK), logical reasoning, and skill-based tasks.</li>
+        <li>परीक्षा की तिथि, समय और माध्यम (ऑनलाइन/ऑफलाइन) ईमेल/सूचना के माध्यम से सूचित किया जाएगा।<br>
+        The date, time, and mode of the test (online/offline) will be communicated via email/notification.</li>
+        <li>उम्मीदवारों को परीक्षा के दौरान ईमानदारी और अनुशासन बनाए रखना होगा।<br>
+        Candidates must maintain honesty and discipline during the test.</li>
+        <li>किसी भी प्रकार की नकल या अनुचित गतिविधि होने पर उम्मीदवार को अयोग्य घोषित किया जा सकता है।<br>
+        Any form of cheating or unfair practice may lead to disqualification.</li>
+        <li>परीक्षा की अवधि और प्रश्नों की संख्या पहले से निर्धारित होगी और उम्मीदवारों को सूचित की जाएगी।<br>
+        The duration of the test and the number of questions will be predetermined and communicated to candidates.</li>
+        <li>परिणाम सही उत्तरों और स्कोर के आधार पर घोषित किए जाएंगे।<br>
+        Results will be announced based on correct answers and scoring.</li>
+      </ul>
     </div>
   </div>
 
+  <div class="rules">
+    <p><strong>Terms & Conditions:</strong></p>
+    <ul>
+      <li>यह contest skill-based है, lottery नहीं।</li>
+      <li>Entry Fee non-refundable है।</li>
+      <li>सही उत्तर देने वालों में से एक विजेता lucky draw द्वारा चुना जाएगा।</li>
+      <li>Organizer का decision final होगा।</li>
+    </ul>
+  </div>
 </body>
 </html>
