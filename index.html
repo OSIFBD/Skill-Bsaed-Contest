@@ -11,23 +11,57 @@
       margin: 0;
       padding: 0;
     }
+
+    /* Header with background image and confetti */
     header {
-      background: #007bff;
+      background: url('https://images.unsplash.com/photo-1590608897129-79b4f8b4d747?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 60px 20px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 5px solid #007bff;
     }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+    }
+    header h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      animation: slideIn 1s ease-out;
+    }
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
     .container {
       max-width: 800px;
       margin: 30px auto;
       background: white;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    h1, h2 {
-      color: #333;
-    }
+
+    h2 { color: #333; }
+
     .btn {
       display: inline-block;
       background: #28a745;
@@ -37,24 +71,21 @@
       text-decoration: none;
       font-weight: bold;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.2s;
       margin-top: 10px;
     }
     .btn:hover {
       background: #218838;
+      transform: scale(1.05);
     }
+
     .rules {
       background: #f1f1f1;
       padding: 15px;
       border-radius: 8px;
       margin-top: 20px;
     }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      margin-top: 20px;
-    }
+
     .qr {
       text-align: center;
       margin-top: 20px;
@@ -64,7 +95,25 @@
       max-width: 100%;
       border: 2px solid #007bff;
       border-radius: 12px;
+      transition: transform 0.2s;
     }
+    .qr img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Confetti */
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #fce18a;
+      opacity: 0.8;
+      top: -10px;
+      z-index: 3;
+      pointer-events: none;
+      border-radius: 50%;
+    }
+
     @media (max-width: 600px) {
       .container {
         margin: 15px;
@@ -79,6 +128,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>🎉 Skill-Based Contest 🎉</h1>
     <p>केवल ₹750 में जीतिए <strong>[Electric Scooty worth 75000 Rs]</strong></p>
@@ -100,6 +150,7 @@
     <div class="qr">
       <p>या QR Code scan करें:</p>
       <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=hmt2cu@okaxis&pn=Harmeet%20Singh.&am=750&cu=INR" alt="UPI QR Code">
+      <p style="margin-top:5px; font-size:14px; color:#555;">PhonePe / GPay / Paytm खोलें और scan करें</p>
     </div>
 
     <h2>Entry Form:</h2>
@@ -117,5 +168,31 @@
       </ul>
     </div>
   </div>
+
+  <!-- Confetti Script -->
+  <script>
+    const header = document.querySelector('header');
+    function createConfetti() {
+      const confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      confetti.style.left = Math.random() * window.innerWidth + 'px';
+      confetti.style.backgroundColor = `hsl(${Math.random()*360}, 70%, 60%)`;
+      confetti.style.width = confetti.style.height = (5 + Math.random()*10) + 'px';
+      header.appendChild(confetti);
+
+      let top = -10;
+      const fall = setInterval(() => {
+        top += 3 + Math.random()*3;
+        confetti.style.top = top + 'px';
+        if (top > header.offsetHeight) {
+          confetti.remove();
+          clearInterval(fall);
+        }
+      }, 20);
+    }
+
+    setInterval(createConfetti, 200);
+  </script>
+
 </body>
 </html>
